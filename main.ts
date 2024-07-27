@@ -5,6 +5,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Bouncepad, function (sprite, oth
     sprite.vy = sprite.vy * -1
     otherSprite.setPosition(randint(10, 150), randint(50, 110))
 })
+function doSomething (text: string) {
+    game.splash(text)
+}
 scene.setBackgroundColor(9)
 let 主角 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
@@ -46,3 +49,4 @@ let 跳床 = sprites.create(img`
 主角.ay = 50
 主角.y = 0
 controller.moveSprite(主角, 100, 0)
+doSomething("666")
