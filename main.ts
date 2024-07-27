@@ -2,11 +2,11 @@ namespace SpriteKind {
     export const Bouncepad = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Bouncepad, function (sprite, otherSprite) {
-    主角.vy = 主角.vy * -1
+    sprite.vy = sprite.vy * -1
     otherSprite.setPosition(randint(10, 150), randint(50, 110))
 })
-let 主角: Sprite = null
-主角 = sprites.create(img`
+scene.setBackgroundColor(9)
+let 主角 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
     . . . f f f 2 2 2 2 f f f . . . 
